@@ -4,7 +4,7 @@ const distube = require('distube')
         module.exports = {
             name: "loop",
             description: "loop a song :)",
-            run: async(client, message) => {
+            run: async(client, message, args) => {
 
   if (!message.member.voice.channel) return message.channel.send('You must be in a voice channel to use this command.');
               if (message.guild.me.voice.channel && message.member.voice.channel.id != message.guild.me.voice.channel.id) return message.channel.send("join my voice channel")
